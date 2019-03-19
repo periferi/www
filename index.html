@@ -1,76 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Periferi</title>
-	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		* {
-			margin: 0;
-			font-family: sans-serif;
-			font-style: italic;
-		}
-		body {
-			display: flex;
-			width: 100%;
-			height: 100vh;
-			flex: 1;
-			justify-content: center;
-			align-items: center;
-			background-color: #1B9F97;
-			flex-direction: column;
-		}
-		h1 {
-			font-size: 15vmin;
-			z-index: 3;
-			color: white;
-		}
-		.bottom, .top, .top2 {
-			position: fixed;
-			height: 50vh;
-			width: 100%;
-			top: 0;
-			z-index: 0;
-		}
-		.top {
-			background-color: #1B9F97;
-			transform: translateX(-100%);
-			animation: slide-right 1.5s forwards 500ms;
-			z-index: 2;
-		}
-		.top2 {
-			background-color: #1B2642;
-			z-index: 1;
-		}
-		.bottom {
-			background-color: #1B2642;
-			top: 50%;
-			animation: slide-right 2s;
-		}
-		a {
-			z-index: 3;
-			color: white;
-			text-decoration: none;
-			font-style: normal;
-			position: fixed;
-			right: 1em;
-			bottom: 1em;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		@keyframes slide-right {
-			0% { transform: translateX(-100%); }
-			100%   { transform: translateX(0); }
-		}
-	</style>
-</head>
-<body>
-	<div class="top"></div>
-	<div class="top2"></div>
-	<div class="bottom"></div>
-	<h1>Periferi</h1>
-	<a href="mailto:info@periferi.dk">info@periferi.dk</a>
-</body>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Periferi</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      async
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Overpass:400,600i"
+      rel="stylesheet"
+    />
+    <link async rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="nav-title">
+        <img src="assets/name-text.svg" type="" />
+      </a>
+      <a href="#hvad-er-periferi">Hvad er Periferi</a>
+      <a href="#hvad-kan-vi-gøre-for-dig">Hvad kan vi gøre for dig</a>
+      <a href="#vores-proces">Vores proces</a>
+      <a href="#hvem-står-bag">Hvem står bag</a>
+      <a href="#info">Info</a>
+    </nav>
+    <header>
+      <div class="top"></div>
+      <div class="top2"></div>
+      <div class="bottom"></div>
+      <svg fill="none" class="header-title" viewBox="0 0 2514 583">
+        <path
+          fill="#fff"
+          fill-rule="evenodd"
+          d="M23.454 439.52L0 572.998h83.2l9.9-56.509c-28.298-20.402-52.102-46.648-69.646-76.969zm15.263-86.861l24.397-138.845c22.282-37.922 56.588-67.929 97.68-84.783L134.4 278.598H272c36.8 0 64.533-11.2 83.2-33.6 16.946-20.82 26.2-43.837 27.762-69.053 24.766 25.734 42.772 58.019 51.163 93.999-6.194 9.406-13.303 18.424-21.325 27.054-35.2 37.867-85.067 56.8-149.6 56.8H121.6l-19.634 112.078c-32.273-29.182-55.077-68.641-63.25-113.217zm421.502-143.375C420.402 126.298 335.592 69 237.398 69c-60.577 0-116.061 21.807-159.03 58L98.4 12.998h214.4c51.733 0 90.133 14.667 115.2 44 25.067 29.334 37.6 64 37.6 104 0 16.856-1.794 32.952-5.381 48.286zm39.956 326.114c28.267 31.467 66.4 47.2 114.4 47.2 53.867 0 101.067-18.133 141.6-54.4l-38.4-54.4c-29.867 25.067-61.067 37.6-93.6 37.6-26.133 0-46.933-9.066-62.4-27.2-14.933-18.133-22.4-42.933-22.4-74.4v-9.6h264c10.133-30.4 15.2-59.733 15.2-88 0-51.733-12.8-90.933-38.4-117.6-25.6-26.666-61.333-40-107.2-40-64 0-116 25.067-156 75.2-39.467 49.6-59.2 109.6-59.2 180 0 52.267 14.133 94.134 42.4 125.6zm239.2-204h-188.8c7.467-31.466 20.8-56.8 40-76 19.733-19.733 44.533-29.6 74.4-29.6 20.8 0 38.133 6.134 52 18.4 14.4 11.734 22.4 30.934 24 57.6.533 7.467 0 17.334-1.6 29.6zm199.662-167.2l-72 408.8h79.2l40.801-229.6c6.933-38.4 20.532-66.4 40.802-84 20.26-17.6 40.8-26.4 61.6-26.4 20.26 0 38.93 6.934 56 20.8l24-75.2c-16-16-35.74-24-59.2-24-39.47 0-73.07 19.2-100.8 57.6l8.8-48h-79.203zm329.473-77.6c8 7.467 17.86 11.2 29.6 11.2 14.4 0 26.93-5.6 37.6-16.8 11.2-11.2 16.8-24.533 16.8-40 0-11.2-4-20.533-12-28-7.47-8-17.34-12-29.6-12-13.87 0-26.4 5.6-37.6 16.8-10.67 11.2-16 24.534-16 40 0 11.2 3.73 20.8 11.2 28.8zm-22.4 77.6l-72 408.8h79.2l72-408.8h-79.2zm225.58 408.8l60-337.6h86.4l12-71.2h-86.4l9.6-51.2c4.8-25.066 17.6-37.6 38.4-37.6 16 0 33.86 4.8 53.6 14.4l12-66.4c-24-13.866-48.54-20.8-73.6-20.8-59.74 0-95.47 31.2-107.2 93.6l-12 68h-60l-12.8 71.2h60.8l-60 337.6h79.2zm189.42-37.6c28.27 31.467 66.4 47.2 114.4 47.2 53.87 0 101.07-18.133 141.6-54.4l-38.4-54.4c-29.86 25.067-61.06 37.6-93.6 37.6-26.13 0-46.93-9.066-62.4-27.2-14.93-18.133-22.4-42.933-22.4-74.4v-9.6h264c10.14-30.4 15.2-59.733 15.2-88 0-51.733-12.8-90.933-38.4-117.6-25.6-26.666-61.33-40-107.2-40-64 0-116 25.067-156 75.2-39.46 49.6-59.2 109.6-59.2 180 0 52.267 14.14 94.134 42.4 125.6zm239.2-204h-188.8c7.47-31.466 20.8-56.8 40-76 19.74-19.733 44.54-29.6 74.4-29.6 20.8 0 38.14 6.134 52 18.4 14.4 11.734 22.4 30.934 24 57.6.54 7.467 0 17.334-1.6 29.6zm199.67-167.2l-72.01 408.8h79.21l40.8-229.6c6.93-38.4 20.53-66.4 40.79-84 20.27-17.6 40.8-26.4 61.6-26.4 20.27 0 38.94 6.934 56 20.8l24-75.2c-16-16-35.73-24-59.19-24-39.47 0-73.07 19.2-100.81 57.6l8.81-48h-79.2zm329.46-77.6c8 7.467 17.87 11.2 29.6 11.2 14.4 0 26.94-5.6 37.6-16.8 11.2-11.2 16.8-24.533 16.8-40 0-11.2-4-20.533-12-28-7.46-8-17.33-12-29.6-12-13.86 0-26.4 5.6-37.6 16.8-10.66 11.2-16 24.534-16 40 0 11.2 3.74 20.8 11.2 28.8zm-22.4 77.6l-72 408.8h79.2l72-408.8h-79.2z"
+          clip-rule="evenodd"
+        />
+      </svg>
+
+      <div class="scroller">
+        <svg
+          width="51"
+          height="32"
+          viewBox="0 0 51 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M25.5002 24.2717L47.1455 0.32373L50.8549 3.67643L25.5002 31.7284L0.145508 3.67643L3.85488 0.323734L25.5002 24.2717Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </header>
+    <div class="tri-test"></div>
+    <main>
+      <section class="text-section">
+        <div class="inner-section">
+          <div class="section-title" id="hvad-er-periferi">
+            <h1>Hvad er Periferi</h1>
+          </div>
+          <p>
+            Periferi bygger på et ønske om, at levere kvalitetsbevidste
+            softwareløsninger med høj sikkerhed til vores kunder. Med
+            udgangspunkt i digitaliseringen skabes nye muligheder for
+            kundekontakt og markedsføring som kræver effektive platforme. At
+            gøre maksimalt brug af de remedier vi alle har, i form af vores
+            telefoner og computere, kræver nøje omtanke om det tekniske, det
+            æstetiske og det etiske. Det er her Periferi kommer ind i billedet.
+          </p>
+        </div>
+      </section>
+      <section class="text-section">
+        <div class="inner-section">
+          <div class="section-title" id="hvad-kan-vi-gøre-for-dig">
+            <h1>Hvad kan vi gøre for dig</h1>
+          </div>
+          <details open>
+            <summary>Udvikling af websites og webapps</summary>
+            <p>
+              Savner du en platform til præsentation af dit budskab, eller
+              ønsker du en fornyelse af din side? Måske mangler du en webapp,
+              som kan give dig et højt niveau af interaktion mellem dig og dine
+              kunder eller kunderne indbyrdes?
+            </p>
+            <p>
+              Vi kan hjælpe dig med at skabe rammerne for den kommunikation, der
+              er nødvendig for præcis dit produkt.
+            </p>
+          </details>
+          <details open>
+            <summary>Interne systemer</summary>
+            <p>
+              Ønsker du et værktøj, der kan hjælpe dig og dine ansatte med
+              koordination og planlægning? Ligger du inde med en størrer mængde
+              data, som ønskes visualiseret eller behandlet?
+            </p>
+            <p>
+              Interne processer kan til tider blive ganske repetitive; med
+              teknologi kan vi opbygge systemer til at assistere os, så du igen
+              kan fokusere på, hvad faktisk kræver dine kompetencer.
+            </p>
+          </details>
+          <details open>
+            <summary>Markedsføring</summary>
+            <p>
+              Har du en ide, men mangler du hjælp til at formidle den? Er du
+              interesseret i materiale til at supplere dit produkt, og derved
+              etablere kontakt til nye kunder?
+            </p>
+            <p>
+              Vi kan tilbyde dig rådgivning vedrørende udvikling af design,
+              produktion af relevante fotos, video materiale og ikke mindst
+              værktøjerne til at præsentere dette for dine fremtidige kunder.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="process-section">
+        <div class="inner-section">
+          <div class="section-title" id="vores-proces">
+            <h1>Vores proces</h1>
+          </div>
+          <div class="columns">
+            <div>
+              <h2>Din Idé</h2>
+              <p>
+                Vi vil hjælpe dig med at få dine ideer realiseret, ved at
+                udvikle den teknologiske fornødenhed du har brug for. Vores
+                motivation for udviklingen er, at produktet skal møde dine behov
+                og forventninger.
+              </p>
+              <h2>Vores kompetancer</h2>
+              <p>
+                Med erfaring i den digitale branche har vi de værktøjer det
+                kræver, for at gøre din idé til virkelighed. <br />
+                For at se en dybdegående gennemgang af vores teknologiske kunnen
+                se Tech.
+              </p>
+              <h2>Dine resultater</h2>
+              <p>
+                Vi afleverer et færdigt produkt, så det eneste du skal gøre er,
+                at byde dine nye brugere velkommen.
+              </p>
+            </div>
+            <div>
+              <div class="spinner">
+                <embed
+                  src="/assets/fig-comunity3.svg"
+                  alt="code"
+                  class="spinner-node"
+                />
+                <embed
+                  src="/assets/fig-gear.svg"
+                  alt="gear"
+                  class="spinner-node"
+                />
+                <embed
+                  src="/assets/fig-idea4.svg"
+                  alt="idea"
+                  class="spinner-node"
+                />
+                <embed
+                  src="/assets/fig-periferi.svg"
+                  alt="periferi"
+                  class="spinner-periferi"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-section">
+        <div class="inner-section">
+          <div class="section-title" id="hvem-står-bag">
+            <h1>Hvem står bag</h1>
+          </div>
+          <p>
+            I 2019 blev Periferi stiftet af to software studerende fra DTU,
+            Camilla Færch og Oliver Bøving. Med supplerende kompetencer og en
+            brændende interesse for teknologi samt kommunikation, står et stærkt
+            team bag Periferi. Arbejdet er drevet af lysten for dygtiggørelse og
+            kvalitet, hvormed målet er, at opnå ny viden samt udvide grænserne
+            for, hvad der er muligt.
+          </p>
+        </div>
+      </section>
+      <section class="jumbotron-section">
+        <div class="inner-section">
+          <div class="section-title" id="info">
+            <h1>Info</h1>
+          </div>
+          <p>
+            Prisen baseres på valg af produkt samt den investerede tid. Ved
+            interesse for udarbejdelse af tilbud, kontakt os på
+            <a href="mailto:info@periferi.dk">info@periferi.dk</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <div>
+          <div>
+            <embed src="assets/name-text.svg" type="" style="height: 2em" />
+          </div>
+          <div>© 2019 Periferi IVS</div>
+        </div>
+        <div>
+          <div class="text-subtle">Kontakt</div>
+          <div><a href="mailto:info@periferi.dk">info@periferi.dk</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
