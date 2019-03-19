@@ -30,8 +30,10 @@ nav {
 }
 nav > * {
   z-index: 10;
-  display: flex;
   position: relative;
+}
+nav .nav-links {
+  display: flex;
 }
 nav a {
   color: white;
@@ -45,6 +47,11 @@ nav a:hover {
 nav .nav-title * {
   height: 1em;
   margin-top: 0.2em;
+}
+@media all and (max-width: 800px) {
+  nav .nav-links {
+    display: none;
+  }
 }
 header {
   position: relative;
@@ -322,6 +329,7 @@ details {
 }
 details summary {
   font-size: 2rem;
+  outline: none;
 }
 
 .top:after {
